@@ -4,6 +4,9 @@ export default {
   name: 'post',
   type: 'document',
   title: 'Blog Post',
+  initialValue: () => ({
+    views: 0
+  }),
   fields: [
     {
       name: 'title',
@@ -66,6 +69,11 @@ export default {
       name: 'body',
       type: 'bodyPortableText',
       title: 'Body'
+    },
+    {
+      name: 'views',
+      title: 'Number of views',
+      type: 'number'
     }
   ],
   orderings: [
