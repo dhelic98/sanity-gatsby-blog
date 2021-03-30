@@ -1,0 +1,452 @@
+@font-face {
+  font-family: "JournalSans";
+  src: url("../../static/JournalSans.ttf") format('ttf');
+}
+
+.content-div {
+  display: flex;
+  flex: 2;
+  justify-content: space-around;
+}
+
+.content-div>div {
+  max-width: 30%;
+  width: 30%;
+}
+
+.hero-div {
+  text-align: center;
+}
+
+.hero-title {
+  font-weight: bold;
+  font-size: 24px;
+  text-transform: lowercase;
+  color: #ed4e40;
+}
+
+/* .hero-title::after {
+  margin: 0 auto;
+  display: block;
+  height: 2px;
+  width: 130px;
+  content: " ";
+  background-color: rgb(237, 78, 64);
+} */
+
+.pocketList {
+  text-align: justify;
+  font-family: 'JournalSans';
+  font-size: 18px;
+}
+
+.pocket-text {
+  font-family: 'JournalSans';
+  font-weight: bold;
+  font-size: 22px;
+  line-height: normal;
+  margin-bottom: -15px;
+}
+
+.pocket-link {
+  font-family: 'JournalSans';
+  font-weight: normal;
+  font-size: 14px;
+  text-transform: lowercase;
+  margin-top: -15px;
+}
+
+.twitterList {
+  text-align: start;
+}
+
+.writingList {
+  text-align: start;
+}
+
+#writingHeader {
+  color: #ed4e40;
+}
+
+
+.instagram-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+}
+
+.instagram-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 2;
+  opacity: 0;
+  transition: all 0.3s ease 0s;
+}
+
+.instagram-link-styles {
+  position: relative;
+  overflow: hidden;
+}
+
+.instagram-link-styles .gatsby-image-wrapper {
+  box-shadow: inset 0px 10px 14px 14px red;
+}
+
+.instagram-link-styles:focus {
+  outline: none;
+}
+
+.instagram-content {
+  z-index: 10;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  box-shadow: inset 1px 1px 8px 4px white;
+}
+
+.instagram-title {
+  color: white;
+  font-weight: 500;
+  font-size: 0.875rem;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transform: translateY(-45px);
+  transition: all 0.4s ease 0s;
+  opacity: 0;
+}
+
+.instagram-bottom {
+  color: white;
+  transform: translateY(45px);
+  opacity: 0;
+  transition: all 0.4s ease 0s;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  font-size: 14px;
+}
+
+.instagram-heart {
+  display: flex;
+  align-items: center;
+}
+
+.instagram-heart svg {
+  margin-right: 0.25rem;
+}
+
+.instagram-link-styles>div img {
+  transition: all 0.3s ease 0s !important;
+}
+
+.instagram-link-styles:hover .instagram-overlay {
+  opacity: 1;
+}
+
+.instagram-link-styles:focus .instagram-overlay {
+  opacity: 1;
+
+}
+
+.instagram-link-styles:hover .instagram-bottom,
+.instagram-link-styles:focus .instagram-bottom {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.instagram-link-styles:hover .instagram-title,
+.instagram-link-styles:focus .instagram-title {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.visuallyHidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  position: absolute;
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+  .instagram-title {
+    transform: translateY(0);
+  }
+
+  .instagram-bottom {
+    transform: translateY(0);
+  }
+}
+
+#writingButtons {
+  display: flex;
+  flex: 1;
+  width: 70%;
+  margin: 0 auto;
+
+}
+
+#writingButtons div {
+  flex: 1;
+  text-align: center;
+}
+
+#writingButtons div p {
+  cursor: pointer;
+}
+
+#writingHeader {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+#writingHeader h1 {
+  flex: 1;
+}
+
+#writingHeader div {
+  flex: 1;
+  text-align: center;
+  cursor: pointer;
+  justify-content: end;
+}
+
+#writingHeader div p {
+  text-transform: uppercase;
+  font-family: 'JournalSans';
+  color: black;
+}
+
+#writingCategories {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  max-width: 80%;
+  margin: 0 auto;
+  margin-bottom: 40px;
+}
+
+#writingCategories div {
+  flex: 1;
+  text-align: center;
+  cursor: pointer;
+}
+
+#writingCategories div:focus,
+#writingHeader div:focus {
+  outline: none;
+  font-weight: bold;
+}
+
+#writingCategories div p {
+  text-align: center;
+  text-transform: uppercase;
+  font-family: 'JournalSans';
+  display: inline;
+  padding-left: 10px;
+}
+
+.writingCategoryTitle {
+  font-size: 18px;
+  padding-left: 0px !important;
+}
+
+
+
+#writingCategories div:focus {
+  border: 0px;
+}
+
+.writingLink {
+  text-decoration: none;
+  color: black;
+}
+
+.blogContent {
+  width: 60%;
+  margin: 0 auto;
+  text-align: justify;
+  min-height: 80vh;
+}
+
+.postDate {
+  font-weight: bold;
+  font-size: 12pt;
+  color: gray;
+  padding: 0px;
+  margin-bottom: 0px;
+}
+
+.postTitle {
+  font-size: 24pt;
+  padding: 0px;
+  margin: 0px;
+  line-height: normal;
+}
+
+.postTitleLite {
+  font-size: 15pt;
+  padding: 0px;
+  margin: 0px;
+  line-height: normal;
+}
+
+.postDivPreview {
+  margin-bottom: 50px;
+  text-align: justify;
+}
+
+.blogButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.blogButton button {
+  border: 0px;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 15px 60px;
+  font-family: 'JournalSans';
+  background-color: #dddfe6;
+  border: 2px solid transparent;
+}
+
+.blogButton button:hover {
+  border: 2px solid #ed4e40;
+  background-color: white;
+}
+
+.blogCategories {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.blogCategories p {
+  margin: 0 7px;
+  font-size: 11pt;
+}
+
+a:hover {
+  color: #ed4e40 !important;
+}
+
+.blogBody {
+  text-align: justify;
+}
+
+.redIcon {
+  color: red;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.micon {
+  margin: 5px;
+  font-size: 24px;
+}
+
+.writingPage {
+  max-width: 60%;
+  margin: 0 auto;
+}
+
+.footerLink {
+  font-size: 12px;
+  padding: 0 5px;
+}
+
+.termsPage {
+  max-width: 70%;
+  margin: 0 auto;
+}
+
+.termsPage {
+  text-align: justify;
+}
+
+.twitter-card {
+  align-items: center;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.twitter-tweet {
+  margin: 10px auto !important;
+}
+
+@media only screen and (max-width: 768px) {
+  .content-div {
+    display: block;
+  }
+
+  .content-div>div {
+    max-width: 80%;
+    margin: 0 auto;
+    width: 80%;
+  }
+
+  .postDivPreview {
+    text-align: justify;
+  }
+
+  .postTitle {
+    text-align: center;
+  }
+
+  .blogContent {
+    width: 90%;
+  }
+
+  .writingPage {
+    max-width: 90%;
+  }
+}
+
+@media only screen and (max-width: 1380px) and (min-width: 768px) {
+  .content-div {
+    flex-wrap: wrap;
+  }
+
+  .content-div>div {
+    flex: 2;
+    box-sizing: border-box;
+    flex-basis: 100%;
+    margin: 0 auto;
+    max-width: 45%;
+    width: 45%;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+
+  .blogContent {
+    width: 75%;
+  }
+
+  .writingPage {
+    max-width: 75%;
+  }
+
+  #writingCategories {
+    display: block;
+  }
+}
